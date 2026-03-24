@@ -60,6 +60,33 @@
         .logo .flap { color: var(--muted); }
         .logo .name { color: var(--accent-warm); }
 
+        /* Logo animations */
+        @keyframes shimmer {
+            0%   { opacity: 0.7; }
+            50%  { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+
+        @keyframes drift {
+            0%   { transform: translateX(0); }
+            50%  { transform: translateX(2px); }
+            100% { transform: translateX(0); }
+        }
+
+        @keyframes flap-open {
+            0%   { opacity: 0.4; }
+            40%  { opacity: 1; }
+            60%  { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        .logo .sky1 { animation: shimmer 4s ease-in-out infinite; }
+        .logo .sky2 { animation: shimmer 4s ease-in-out 0.5s infinite; }
+        .logo .sky3 { animation: shimmer 4s ease-in-out 1s infinite; }
+        .logo .sky4 { animation: shimmer 4s ease-in-out 1.5s infinite; }
+        .logo .flap { animation: flap-open 6s ease-in-out infinite; }
+        .logo .name { animation: drift 8s ease-in-out infinite; }
+
         /* Hero */
         .tagline {
             text-align: center;
