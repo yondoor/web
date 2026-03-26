@@ -45,14 +45,20 @@
             text-align: center;
             margin-bottom: 2rem;
             line-height: 1.2;
-            position: relative;
         }
 
-        .logo img {
+        .logo-wrap {
+            position: relative;
+            display: inline-block;
             max-width: 240px;
             width: 65%;
+        }
+
+        .logo-wrap img {
+            width: 100%;
             height: auto;
             image-rendering: pixelated;
+            display: block;
         }
 
         /* Twinkle stars */
@@ -74,12 +80,12 @@
             animation-fill-mode: forwards;
         }
 
-        .t1 { background: #ff55ff; top: 18%; left: 30%; animation-delay: 0.5s; animation-iteration-count: 3; }
-        .t2 { background: #ffff55; top: 35%; left: 65%; animation-delay: 1.2s; animation-iteration-count: 2; }
-        .t3 { background: #ffffff; top: 25%; left: 48%; animation-delay: 2.0s; animation-iteration-count: 2; }
-        .t4 { background: #ff55ff; top: 42%; left: 22%; animation-delay: 3.5s; animation-iteration-count: 1; }
-        .t5 { background: #ffff55; top: 15%; left: 75%; animation-delay: 4.8s; animation-iteration-count: 2; }
-        .t6 { background: #ffffff; top: 32%; left: 40%; animation-delay: 6.0s; animation-iteration-count: 1; }
+        .t1 { background: #ff55ff; top: 8%;  left: 25%; animation-delay: 0.5s; animation-iteration-count: 3; }
+        .t2 { background: #ffff55; top: 22%; left: 70%; animation-delay: 1.2s; animation-iteration-count: 2; }
+        .t3 { background: #ffffff; top: 15%; left: 50%; animation-delay: 2.0s; animation-iteration-count: 2; }
+        .t4 { background: #ff55ff; top: 35%; left: 35%; animation-delay: 3.5s; animation-iteration-count: 1; }
+        .t5 { background: #ffff55; top: 10%; left: 60%; animation-delay: 4.8s; animation-iteration-count: 2; }
+        .t6 { background: #ffffff; top: 28%; left: 80%; animation-delay: 6.0s; animation-iteration-count: 1; }
 
         /* Hero */
         .tagline {
@@ -114,13 +120,15 @@
     <div class="container">
 
         <div class="logo">
-            <img src="logo.png" alt="Yondoor">
-            <span class="twinkle t1"></span>
-            <span class="twinkle t2"></span>
-            <span class="twinkle t3"></span>
-            <span class="twinkle t4"></span>
-            <span class="twinkle t5"></span>
-            <span class="twinkle t6"></span>
+            <div class="logo-wrap">
+                <img src="logo.png" alt="Yondoor">
+                <span class="twinkle t1"></span>
+                <span class="twinkle t2"></span>
+                <span class="twinkle t3"></span>
+                <span class="twinkle t4"></span>
+                <span class="twinkle t5"></span>
+                <span class="twinkle t6"></span>
+            </div>
         </div>
 
         <p class="tagline">Touch. Push. You're home.</p>
