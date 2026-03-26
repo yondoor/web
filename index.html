@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yondoor — The door that knows you</title>
     <meta name="description" content="Open source smart door systems. NFC unlock, delivery flap, capacitive touch exit. No keys, no app, no cloud.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400&display=swap" rel="stylesheet">
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <style>
@@ -32,7 +29,7 @@
         body {
             background: var(--bg);
             color: var(--text);
-            font-family: 'Fira Code', 'Courier New', 'Consolas', 'Liberation Mono', monospace;
+            font-family: 'Courier New', 'Consolas', 'Liberation Mono', monospace;
             line-height: 1.6;
             min-height: 100vh;
         }
@@ -50,49 +47,11 @@
             line-height: 1.2;
         }
 
-        .logo pre {
-            display: inline-block;
-            text-align: left;
-            font-size: clamp(0.45rem, 2.2vw, 0.9rem);
-            letter-spacing: 0;
-            white-space: pre;
-            overflow-x: hidden;
+        .logo img {
+            max-width: 200px;
+            width: 60%;
+            height: auto;
         }
-
-        .logo .frame { color: #555; }
-        .logo .sky1 { color: var(--magenta); }
-        .logo .sky2 { color: var(--br-magenta); }
-        .logo .sky3 { color: var(--accent-warm); }
-        .logo .sky4 { color: var(--white); }
-        .logo .flap { color: var(--muted); }
-        .logo .name { color: var(--accent-warm); }
-
-        /* Logo animations */
-        @keyframes shimmer {
-            0%   { opacity: 0.7; }
-            50%  { opacity: 1; }
-            100% { opacity: 0.7; }
-        }
-
-        @keyframes drift {
-            0%   { transform: translateX(0); }
-            50%  { transform: translateX(2px); }
-            100% { transform: translateX(0); }
-        }
-
-        @keyframes flap-open {
-            0%   { opacity: 0.4; }
-            40%  { opacity: 1; }
-            60%  { opacity: 1; }
-            100% { opacity: 0.4; }
-        }
-
-        .logo .sky1 { animation: shimmer 4s ease-in-out infinite; }
-        .logo .sky2 { animation: shimmer 4s ease-in-out 0.5s infinite; }
-        .logo .sky3 { animation: shimmer 4s ease-in-out 1s infinite; }
-        .logo .sky4 { animation: shimmer 4s ease-in-out 1.5s infinite; }
-        .logo .flap { animation: flap-open 6s ease-in-out infinite; }
-        .logo .name { animation: drift 8s ease-in-out infinite; }
 
         /* Hero */
         .tagline {
@@ -127,20 +86,7 @@
     <div class="container">
 
         <div class="logo">
-            <pre>
-<span class="frame">╭───────────────────╮</span>
-<span class="frame">│</span><span class="sky1">███████████████████</span><span class="frame">│</span>
-<span class="frame">│</span><span class="sky2">▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓</span><span class="frame">│</span>
-<span class="frame">│</span><span class="sky3">▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒</span><span class="frame">│</span>
-<span class="frame">│</span><span class="sky4">░░░░░░░░░░░░░░░░░░░</span><span class="frame">│</span>
-<span class="frame">│                   │</span>
-<span class="frame">│  </span><span class="flap">╭╌ ╌ ╌ ╌ ╌ ╌ ╌╮</span><span class="frame">  │</span>
-<span class="frame">│  </span><span class="flap">╰╌ ╌ ╌ ╌ ╌ ╌ ╌╯</span><span class="frame">  │</span>
-<span class="frame">│                   │</span>
-<span class="frame">│                   │</span>
-<span class="frame">│  </span><span class="name"> Y O N D O O R </span><span class="frame">  │</span>
-<span class="frame">╰───────────────────╯</span>
-            </pre>
+            <img src="logo.svg" alt="Yondoor — a smart door with sky gradient and delivery flap">
         </div>
 
         <p class="tagline">Touch. Push. You're home.</p>
